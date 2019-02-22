@@ -11,10 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "botgram": "^2.2.0",
     "dotenv": "^6.2.0",
+    "ethereum-address": "0.0.4",
     "express": "^4.16.4",
+    "memory-cache": "^0.2.0",
     "node-telegram-bot-api": "^0.30.0"
   }
 }
