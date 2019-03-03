@@ -6,3 +6,7 @@ An token distributing telegram bot for Ocean Protocol's testnet
 2. Copy sample.env to .env
 3. Update the content of the .env
 4. Run `npm start`
+
+## Todo
+1. Add deployment how to
+2. Add tests
