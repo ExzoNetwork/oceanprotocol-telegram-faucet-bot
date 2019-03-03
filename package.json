@@ -17,7 +17,6 @@
     "dotenv": "^6.2.0",
     "ethereum-address": "0.0.4",
     "express": "^4.16.4",
-    "memory-cache": "^0.2.0",
     "node-telegram-bot-api": "^0.30.0"
   }
 }
