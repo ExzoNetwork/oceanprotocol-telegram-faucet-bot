@@ -46,7 +46,7 @@ bot.onText(/\/request/, message => {
     if (EthereumAddress.isAddress(address)) {
       bot.sendMessage(
         message.chat.id,
-        "@" + username + "Processing, please wait"
+        "@" + username + " Processing, please wait"
       );
       faucetServer.callFaucet(address, "telegram", response => {
         bot.sendMessage(message.chat.id, "@" + username + " " + response);
