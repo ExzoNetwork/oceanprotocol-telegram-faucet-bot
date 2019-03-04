@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "DEBUG=TelegramServer:* ./node_modules/mocha/bin/mocha --use_strict --exit"
+    "format:js": "prettier --write '**/*.{js,jsx}'",
+    "test": "mocha test/bot.test.js"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "eslint": "^5.15.0",
     "eslint-config-oceanprotocol": "^1.3.0",
     "mocha": "^6.0.2",
+    "prettier": "^1.16.4",
     "telegram-test": "^0.1.7",
     "telegram-test-api": "^1.2.3"
   }
