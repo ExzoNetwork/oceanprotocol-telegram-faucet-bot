@@ -22,12 +22,12 @@ if (process.env.NODE_ENV === 'production') {
  */
 bot.onText(/\/start/, message => {
     // eslint-disable-next-line camelcase
-    const { first_name } = message.from
+    const { username } = message.from
 
     bot.sendMessage(
         message.chat.id,
         // eslint-disable-next-line camelcase
-        'Hey ' + first_name + ', use /request <address> to request for faucet'
+        'Hey @' + username + ', use /request <address> to request for faucet'
     )
 })
 
@@ -50,12 +50,20 @@ bot.onText(/\/request/, message => {
                 message.chat.id,
                 '@' + username + ' Processing, please wait'
             )
-            faucetServer.callFaucet(address, 'telegram', response => {
-                bot.sendMessage(
-                    message.chat.id,
-                    '@' + username + ' ' + response
-                )
-            })
+            faucetServer
+                .callFaucet(address, 'telegram')
+                .then(response => {
+                    bot.sendMessage(
+                        message.chat.id,
+                        `@${username}, ${response.message}`
+                    )
+                })
+                .catch(err => {
+                    bot.sendMessage(
+                        message.chat.id,
+                        `@${username}, an error occurred on our end. Please try again`
+                    )
+                })
         } else {
             bot.sendMessage(
                 message.chat.id,
