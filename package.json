@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node index.js",
     "format:js": "prettier --write '**/*.{js,jsx}'",
-    "test": "mocha test/bot.test.js"
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "keywords": [],
   "author": "",
@@ -25,9 +26,11 @@
   "devDependencies": {
     "axios-mock-adapter": "^1.16.0",
     "chai": "^4.2.0",
+    "codecov": "^3.2.0",
     "eslint": "^5.15.0",
     "eslint-config-oceanprotocol": "^1.3.0",
     "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
     "prettier": "^1.16.4"
   }
 }
