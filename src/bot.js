@@ -1,4 +1,4 @@
-const token = process.env.AUTH_TOKEN
+const token = process.env.BOT_TOKEN
 
 const NodeBot = require('node-telegram-bot-api')
 const EthereumAddress = require('ethereum-address')
@@ -10,7 +10,7 @@ let bot
 if (process.env.NODE_ENV === 'production') {
     bot = new NodeBot(token)
 
-    bot.setWebHook(process.env.HEROKU_URL + bot.token)
+    bot.setWebHook(process.env.APP_URL + bot.token)
 } else {
     bot = new NodeBot(token, {
         polling: true
