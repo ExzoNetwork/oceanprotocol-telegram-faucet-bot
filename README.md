@@ -37,7 +37,7 @@ yarn install
 > ! The next step could be done from Heroku app **Settings**: -> *Reveal Config Vars* -> add [*KEY* = *VALUE*] pairs.
 6. Setup config variables
    ```bash
-    heroku config:set TOKEN=BOT_TOKEN
+    heroku config:set BOT_TOKEN=TOKEN
     heroku config:set APP_URL=$(heroku info -s | grep web_url | cut -d= -f2)
     ```
 7. `git add * && git commit -m "<commit-message>"`
