@@ -1,5 +1,5 @@
 # Ocean Protocol Faucet Telegram bot
-An token distributing telegram bot for Ocean Protocol's testnet
+A token distributing telegram bot for Ocean Protocol's testnet
 
 ## Getting Started 🛠
 ```bash
@@ -42,7 +42,3 @@ yarn install
     ```
 7. `git add * && git commit -m "<commit-message>"`
 8. `git push heroku master`
-
-
-## Todo
-1. Add tests

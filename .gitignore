@@ -2,3 +2,5 @@
 # Dependency directory
 node_modules
 .env
+coverage.lcov
+.nyc_output
